@@ -20,7 +20,7 @@ const ScanSection = ({ onScanComplete }) => {
 
   const handleScan = () => {
     setIsProcessing(true);
-    
+
     // Simulate AI processing
     setTimeout(() => {
       const ingredients = ingredientText || sampleIngredients;
@@ -40,7 +40,7 @@ const ScanSection = ({ onScanComplete }) => {
         <div className="section-title">
           <h2 className="animate-fadeInUp">Scan Your Food Label</h2>
           <p className="text-large animate-fadeInUp animate-delay-1">
-            Upload a photo or paste the ingredient list to get instant AI-powered insights
+            Upload photo or paste ingredients for instant AI analysis
           </p>
         </div>
 
@@ -52,8 +52,8 @@ const ScanSection = ({ onScanComplete }) => {
               onClick={() => setInputMethod('upload')}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" strokeWidth="2"/>
-                <circle cx="12" cy="13" r="4" strokeWidth="2"/>
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" strokeWidth="2" />
+                <circle cx="12" cy="13" r="4" strokeWidth="2" />
               </svg>
               Upload Photo
             </button>
@@ -62,10 +62,10 @@ const ScanSection = ({ onScanComplete }) => {
               onClick={() => setInputMethod('text')}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" strokeWidth="2"/>
-                <polyline points="14 2 14 8 20 8" strokeWidth="2"/>
-                <line x1="16" y1="13" x2="8" y2="13" strokeWidth="2"/>
-                <line x1="16" y1="17" x2="8" y2="17" strokeWidth="2"/>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" strokeWidth="2" />
+                <polyline points="14 2 14 8 20 8" strokeWidth="2" />
+                <line x1="16" y1="13" x2="8" y2="13" strokeWidth="2" />
+                <line x1="16" y1="17" x2="8" y2="17" strokeWidth="2" />
               </svg>
               Type Text
             </button>
@@ -84,9 +84,9 @@ const ScanSection = ({ onScanComplete }) => {
               <label htmlFor="file-upload" className="file-label">
                 <div className="upload-icon">
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <polyline points="17 8 12 3 7 8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <line x1="12" y1="3" x2="12" y2="15" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <polyline points="17 8 12 3 7 8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <line x1="12" y1="3" x2="12" y2="15" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </div>
                 <h4>
@@ -123,16 +123,16 @@ const ScanSection = ({ onScanComplete }) => {
               {isProcessing ? (
                 <>
                   <svg className="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" opacity="0.25"/>
-                    <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" opacity="0.25" />
+                    <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                   Analyzing...
                 </>
               ) : (
                 <>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <polyline points="22 4 12 14.01 9 11.01" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <polyline points="22 4 12 14.01 9 11.01" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   Analyze Ingredients
                 </>
@@ -146,7 +146,7 @@ const ScanSection = ({ onScanComplete }) => {
           {/* Privacy Note */}
           <div className="privacy-note">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>Your data is processed locally and never stored on our servers</span>
           </div>

@@ -414,7 +414,7 @@ textarea {
   }
   
   .container {
-    padding: 0 var(--space-sm);
+    padding: 0 var(--space-md);
   }
   
   .section {
@@ -427,7 +427,7 @@ textarea {
   }
   
   .btn-large {
-    padding: 1rem 2rem;
+    padding: 0.875rem 2rem;
   }
 }
 

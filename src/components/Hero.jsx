@@ -17,10 +17,10 @@ const Hero = ({ onNavigate }) => {
           <div className="hero-text animate-fadeInUp">
             <span className="hero-badge">AI-Powered Food Intelligence</span>
             <h1 className="hero-title animate-fadeInUp animate-delay-1">
-              Understand what's really in your food
+              Know what's in your food
             </h1>
             <p className="hero-description text-large animate-fadeInUp animate-delay-2">
-              Decode ingredient labels instantly with AI. Get clear, honest explanations about what you're eating—no medical degree required.
+              AI-powered ingredient analysis. Clear, honest insights instantly.
             </p>
             
             <div className="hero-cta-group animate-fadeInUp animate-delay-3">

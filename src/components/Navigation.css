@@ -147,11 +147,11 @@
   .nav-links {
     gap: var(--space-sm);
   }
-  
+
   .logo-text {
     font-size: 1.125rem;
   }
-  
+
   .nav-link {
     font-size: 0.9375rem;
   }
@@ -161,15 +161,61 @@
   .nav-links {
     display: none;
   }
-  
-  .nav-cta {
-    display: none;
-  }
-  
+
   .mobile-menu-toggle {
     display: block;
+    margin-left: var(--space-sm);
   }
-  
+
+  /* Keep CTA visible but smaller on mobile if desired, or hide it. 
+     User requested "fit properly", so we show a compact version or icon only.
+     Here we show it but scale it down. */
+  .nav-content {
+    gap: 0.25rem;
+    /* Minimal gap to fit everything */
+  }
+
+  .desktop-only-text {
+    display: inline;
+    /* Show full text as requested */
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    /* Very compact padding */
+    font-size: 0.75rem;
+    /* Smaller font */
+    white-space: nowrap;
+    min-width: 0;
+    height: 32px;
+    /* Fixed small height */
+  }
+
+  .nav-cta svg {
+    width: 14px;
+    /* Smaller icon */
+    height: 14px;
+    margin-right: 0.25rem;
+  }
+
+  /* Optional: On very small screens, hide text and show icon only */
+  @media (max-width: 360px) {
+    .nav-cta span {
+      display: none;
+      /* We'll need to wrap text in span in JSX if not already, or just accept text */
+    }
+
+    .nav-cta {
+      padding: 0.5rem;
+    }
+
+    .nav-cta svg {
+      margin-right: 0;
+    }
+  }
+
   .mobile-menu {
     display: flex;
   }

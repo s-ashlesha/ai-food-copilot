@@ -137,6 +137,7 @@ textarea {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -164,21 +165,21 @@ textarea {
   .scan-card {
     padding: var(--space-lg);
   }
-  
+
   .input-method-toggle {
     flex-direction: column;
   }
-  
+
   .toggle-btn {
     width: 100%;
   }
-  
+
   .scan-actions {
     flex-direction: column;
   }
-  
+
   .file-label {
-    min-height: 240px;
+    min-height: 180px;
     padding: var(--space-lg);
   }
 }
@@ -187,11 +188,11 @@ textarea {
   .scan-card {
     padding: var(--space-md);
   }
-  
+
   .file-label h4 {
     font-size: 1rem;
   }
-  
+
   .upload-icon svg {
     width: 40px;
     height: 40px;

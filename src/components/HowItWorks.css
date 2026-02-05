@@ -85,7 +85,8 @@
 }
 
 .step-connector {
-  display: none; /* Hidden on desktop, shows on mobile as vertical */
+  display: none;
+  /* Hidden on desktop, shows on mobile as vertical */
 }
 
 /* Value Propositions */
@@ -133,7 +134,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
-  
+
   .step-connector {
     display: none;
   }
@@ -144,40 +145,33 @@
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  
+
   .step-card {
     padding: var(--space-lg);
   }
-  
+
   .step-connector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
-    color: var(--color-sage);
+    display: none;
   }
-  
+
   .step-card:last-child .step-connector {
     display: none;
   }
-  
+
   .step-number {
     font-size: 2.5rem;
   }
-  
+
   .step-icon {
     width: 64px;
     height: 64px;
   }
-  
+
   .step-icon svg {
     width: 36px;
     height: 36px;
   }
-  
+
   .value-props {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
@@ -188,13 +182,13 @@
   .step-card {
     padding: var(--space-md);
   }
-  
+
   .step-number {
     font-size: 2rem;
     top: var(--space-sm);
     right: var(--space-sm);
   }
-  
+
   .step-title {
     font-size: 1.25rem;
   }

@@ -83,10 +83,10 @@ const Navigation = ({ onNavigate, activeSection }) => {
             onClick={() => handleNavClick('scan')}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="2"/>
-              <path d="M9 3v18M15 3v18M3 9h18M3 15h18" strokeWidth="2"/>
+              <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="2" />
+              <path d="M9 3v18M15 3v18M3 9h18M3 15h18" strokeWidth="2" />
             </svg>
-            Scan Food Label
+            Scan <span className="desktop-only-text">Food Label</span>
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -98,14 +98,14 @@ const Navigation = ({ onNavigate, activeSection }) => {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               {isMobileMenuOpen ? (
                 <>
-                  <line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round" />
                 </>
               ) : (
                 <>
-                  <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="3" y1="12" x2="21" y2="12" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="3" y1="18" x2="21" y2="18" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="3" y1="12" x2="21" y2="12" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="3" y1="18" x2="21" y2="18" strokeWidth="2" strokeLinecap="round" />
                 </>
               )}
             </svg>

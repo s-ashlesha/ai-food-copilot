@@ -1,0 +1,233 @@
+/* ===========================
+   RESULTS SECTION
+   =========================== */
+
+.results-section {
+  background: white;
+}
+
+.results-header {
+  margin-bottom: var(--space-xl);
+}
+
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+  border-left: 4px solid var(--color-warning-amber);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  margin-top: var(--space-md);
+}
+
+.alert-banner svg {
+  flex-shrink: 0;
+  color: var(--color-warning-amber);
+}
+
+/* Ingredients Grid */
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+/* Ingredient Card */
+.ingredient-card {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.ingredient-card.highlighted {
+  border: 2px solid var(--color-warning-amber);
+  box-shadow: 0 4px 16px rgba(244, 162, 97, 0.15);
+}
+
+.ingredient-card.highlighted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-warning-amber), var(--color-apricot));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.card-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.concern-icon {
+  flex-shrink: 0;
+  color: var(--color-warning-amber);
+  margin-top: 0.25rem;
+}
+
+.ingredient-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-charcoal);
+  margin: 0;
+  word-break: break-word;
+}
+
+.card-body {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.purpose-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-mint);
+  color: var(--color-olive);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.purpose-tag svg {
+  flex-shrink: 0;
+}
+
+.tradeoff-content {
+  max-height: 3.6em;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+  position: relative;
+}
+
+.tradeoff-content.expanded {
+  max-height: 500px;
+}
+
+.tradeoff-content p {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.expand-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+  margin-top: var(--space-sm);
+  padding: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-light-gray);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.expand-btn:hover {
+  background: var(--color-peach);
+}
+
+.expand-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+/* Results Summary */
+.results-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, var(--color-mint), var(--color-light-gray));
+}
+
+.results-summary h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--color-charcoal);
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .results-summary {
+    padding: var(--space-lg);
+  }
+  
+  .summary-stats {
+    gap: var(--space-md);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .stat-item {
+    padding: var(--space-sm);
+    background: white;
+    border-radius: var(--radius-md);
+  }
+}
